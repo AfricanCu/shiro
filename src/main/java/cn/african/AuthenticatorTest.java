@@ -43,4 +43,6 @@ public class AuthenticatorTest {
         PrincipalCollection principals = subject.getPrincipals();
 
     }
+
+
 }
