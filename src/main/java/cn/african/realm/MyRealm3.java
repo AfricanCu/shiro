@@ -3,10 +3,10 @@ package cn.african.realm;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
 
-public class MyRealm1 implements Realm {
+public class MyRealm3 implements Realm {
     @Override
     public String getName() {
-        return "myrealm1";
+        return "myrealm3";
     }
 
     @Override
@@ -26,6 +26,6 @@ public class MyRealm1 implements Realm {
         if (!"123".equals(password)){
             throw new IncorrectCredentialsException();
         }
-        return new SimpleAuthenticationInfo(username,password,getName());
+        return new SimpleAuthenticationInfo(username+"@163.com",password,getName());
     }
 }

@@ -3,10 +3,10 @@ package cn.african.realm;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
 
-public class MyRealm1 implements Realm {
+public class MyRealm2 implements Realm {
     @Override
     public String getName() {
-        return "myrealm1";
+        return "myrealm2";
     }
 
     @Override
@@ -20,7 +20,7 @@ public class MyRealm1 implements Realm {
         String username = (String) token.getPrincipal();
         //从token中获取密码
         String password = new String((char[]) token.getCredentials());
-        if (!"zhang".equals(username)){
+        if (!"wang".equals(username)){
             throw new UnknownAccountException();
         }
         if (!"123".equals(password)){
